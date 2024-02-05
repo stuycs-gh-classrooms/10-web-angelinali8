@@ -1,0 +1,47 @@
+ali61@cslab1-1:~$ cd marvel
+ali61@cslab1-1:~/marvel$ ls
+ali61@cslab1-1:~/marvel$ mkdir heroes
+ali61@cslab1-1:~/marvel$ mkdir villains
+ali61@cslab1-1:~/marvel$ ls
+heroes  villains
+ali61@cslab1-1:~/marvel$ cd heroes
+ali61@cslab1-1:~/marvel/heroes$ mkdir avengers
+ali61@cslab1-1:~/marvel/heroes$ mkdir xmen
+ali61@cslab1-1:~/marvel/heroes$ ls
+avengers  xmen
+ali61@cslab1-1:~/marvel/heroes$ cd avengers
+ali61@cslab1-1:~/marvel/heroes/avengers$ touch black_widow.txt
+ali61@cslab1-1:~/marvel/heroes/avengers$ touch hulk.txt
+ali61@cslab1-1:~/marvel/heroes/avengers$ ls
+black_widow.txt  hulk.txt
+ali61@cslab1-1:~/marvel/heroes/avengers$ cd ..
+ali61@cslab1-1:~/marvel/heroes$ ls
+avengers  xmen
+ali61@cslab1-1:~/marvel/heroes$ cd xmen
+ali61@cslab1-1:~/marvel/heroes/xmen$ touch storm.txt
+ali61@cslab1-1:~/marvel/heroes/xmen$ touch wolverine.txt
+ali61@cslab1-1:~/marvel/heroes/xmen$ ls
+storm.txt  wolverine.txt
+ali61@cslab1-1:~/marvel/heroes/xmen$ cd ..
+ali61@cslab1-1:~/marvel/heroes$ cd ..
+ali61@cslab1-1:~/marvel$ cd villains
+ali61@cslab1-1:~/marvel/villains$ touch thanos.txt
+ali61@cslab1-1:~/marvel/villains$ mkdir hydra
+ali61@cslab1-1:~/marvel/villains$ cd hydra
+ali61@cslab1-1:~/marvel/villains/hydra$ touch red_skull.txt
+ali61@cslab1-1:~/marvel$ cd ..
+ali61@cslab1-1:~$ tree marvel
+marvel
+├── heroes
+│   ├── avengers
+│   │   ├── black_widow.txt
+│   │   └── hulk.txt
+│   └── xmen
+│       ├── storm.txt
+│       └── wolverine.txt
+└── villains
+    ├── hydra
+    │   └── red_skull.txt
+    └── thanos.txt
+
+5 directories, 6 files
