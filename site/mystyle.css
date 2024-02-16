@@ -1,6 +1,5 @@
 .contents ul {
-  list-style-type : none;
-  padding : 100;
+  list-style-type : none
 }
 
 .menu {
@@ -8,5 +7,7 @@
 }
 
 body {
-  background-color : lavenderblush
+  background-color : lavenderblush;
+  padding : 100;
+  padding-color : aliceblue;
 }
