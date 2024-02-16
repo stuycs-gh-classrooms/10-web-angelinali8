@@ -1,0 +1,13 @@
+.menu ul {
+  list-style-type : none;
+  padding-left : 0;
+}
+
+.contents {
+  display : inline;
+}
+
+h1 {
+  color : saddlebrown
+  background-color : lavenderblush
+}
