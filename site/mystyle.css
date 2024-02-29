@@ -8,6 +8,9 @@
 
 body {
   background-color : lavenderblush;
-  padding : 100;
-  padding-color : aliceblue;
 }
+
+p {
+  size : 30px
+}
+
