@@ -1,19 +1,24 @@
 .contents ul {
   list-style-type : none;
-  color : purple;
+
 }
 
 .menu {
   display : inline;
-  color : yellow;
 }
 
 body {
-  background-color : lavenderblush; 
-  
+    margin: 10px;
+    background-color: LemonChiffon;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 p {
-  font-size : 30px
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
