@@ -1,3 +1,7 @@
+html {
+  background-color: thistle;
+}
+
 .contents ul {
   list-style-type : none;
 }
