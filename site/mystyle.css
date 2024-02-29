@@ -7,8 +7,8 @@
 }
 
 body {
- /* background-color : lavenderblush; */
-  background-image: url("cover_pic.webp");
+  background-color : lavenderblush; 
+  
 }
 
 p {
