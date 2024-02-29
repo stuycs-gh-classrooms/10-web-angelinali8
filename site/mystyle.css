@@ -1,6 +1,6 @@
 .contents ul {
   list-style-type : none;
-
+  display: flex;
 }
 
 .menu {
@@ -14,6 +14,7 @@ body {
     padding: 10px;
 }
 
+/*
 .main_page {
     border-radius: 25px;
     font-size: 24px;
@@ -33,4 +34,4 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-
+*/
