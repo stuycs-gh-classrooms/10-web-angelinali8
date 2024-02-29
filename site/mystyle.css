@@ -1,9 +1,11 @@
 .contents ul {
-  list-style-type : none
+  list-style-type : none;
+  color : purple;
 }
 
 .menu {
   display : inline;
+  color : yellow;
 }
 
 body {
