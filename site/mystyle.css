@@ -43,7 +43,7 @@ body{
 }
 
 .page a:hover{
-  background-color: #BAC67A;
+  background-color: #AD5F77;
 }
 
 .active{
@@ -54,7 +54,7 @@ body{
   border-radius: 23px;
   font-size: 24px;
   font-family: "Lucida Console";
-  color: #AD5F77;
+  color: #BAC67A;
   text-align: center;
   padding: 10px;
   margin:1%;
