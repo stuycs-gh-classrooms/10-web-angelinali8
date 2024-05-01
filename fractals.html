@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Project 01: Fractal Function Flaunting</title>
+        <link href="fractals.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <h1> Fractal Function Flaunting </h1>
+      <div class=fractal>
+        <h2>Koch Curve</h2>
+
+        <h3> Original Koch Curve </h3>
+        <img class="img" src="images/Screenshot (12).png" alt="Original Koch Curve">
+        <div class=codes>
+          <p>
+              Original Koch Curve
+              <br><code> draw_koch(patrick, 4, 20) </code></br>
+          </p>
+        </div>
+        <h3> My Koch Curve </h3>
+        <img class="img" src="images/Screenshot (7).png" alt="My Koch Curve">
+        <div class=codes>
+          <div class=mods>
+            <p>
+            <code>koch_curve(spencer, 4, 20)</code>
+            <h4><br> Modifications:</br></h4>
+            <ul>
+              <li>Angles: changed from 60-->120 and 120-->60 to create a different shape</li>
+              <li>Width: set width to 4</li>
+              <li>Color: the new shape reminded me of a cat with ears so I set the color to 'darkgoldenrod'</li>
+            </ul>
+          </p>
+        </div>
+          <p>
+            <br><pre><code>
+      def koch_curve(t, depth, size):
+        if (depth == 1):
+            t.pencolor('darkgoldenrod')
+            t.fd(size)
+        else:
+            koch_curve(t, depth-1, size)
+            t.lt(120)
+            koch_curve(t, depth-1, size)
+            t.rt(60)
+            koch_curve(t, depth-1, size)
+            t.lt(120)
+            koch_curve(t, depth-1, size)
+        
+    spencer = turtle.Turtle()
+    spencer.lt(90)
+    spencer.width(4)
+    spencer.pu()
+    spencer.goto(-40, 40)
+    spencer.pd()
+                
+    koch_curve(spencer, 4, 20)          
+       </code></pre></br>
+          </p>
+        </div>
+      </div>
+
+    <div class=fractal>
+    <h2> Sierpinski Triangle </h2>
+
+    <h3> Original Sierpinski Triangle </h3>
+    <img class="img" src="images/Screenshot (13).png" alt="Original Sierpinski">
+    <div class=codes>
+      <p>
+          Original Sierpinski Triangle.
+          <br><code>sierpinski(spencer, 5, 200)</code></br>
+      </p>
+    </div>
+
+    <h3> My Sierpinski Triangle </h3>
+    <img class="img" src="images/Screenshot (9).png" alt="My Sierpinski">
+    <div class=codes>
+      <div class=mods>
+      <p>
+        <code>sierpinski(spencer, 4, 300, 8.5)</code>
+        <h4><br> Modifications: </br></h4>
+        <ul>
+          <li>Width: both functions were given an additional modifiable width parameter. In the sierpinski function, the width decreases by .5 with each recursive call of itself. </li>
+          <li>Shape: changing the angles in the sierpinski function to 90 degrees change the overall equilateral triangle shape into a right triangle</li>
+          <li>Color: I added a filled in method to paint the inside of each closed triangle and made the filled in color of each triangle randomized </li>
+        </ul>
+      </p>
+    </div>
+        <br><pre><code>
+def triangle(t, size, width):
+    t.width(width)
+    t.lt(60)
+    t.fd(size)
+    t.rt(120)
+    t.fd(size)
+    t.rt(120)
+    t.fd(size)
+    t.rt(180)
+
+def sierpinski(t, depth, size, width):
+    r = randint(100, 230)
+    g = randint(100, 230)
+    b = randint(100, 230)
+    t.fillcolor(r, g, b)
+    t.width(width)
+    if depth == 1:
+        t.begin_fill()
+        triangle(t, size, width)
+        t.end_fill()
+    else:
+        sierpinski(t, depth-1, size/2.5, width-1.5)
+        t.fd(size/2)
+        sierpinski(t, depth-1, size/2.5, width-2)
+        t.bk(size/2)
+        t.lt(90)
+        t.fd(size/2)
+        t.rt(90)
+        sierpinski(t, depth-1, size/2.5, width-2.5)
+        t.rt(90)
+        t.fd(size/2)
+        t.lt(90)
+
+spencer = turtle.Turtle()
+spencer.pu()
+spencer.speed(0)
+spencer.goto(-200, 0)
+spencer.pd()
+sierpinski(spencer, 4, 300, 8.5)
+
+        </code></pre></br>
+      </p>
+    </div>
+  </div>
+
+    <div class=fractal>
+      <h2> Tree </h2>
+
+      <h3> Original Tree </h3>
+      <img class="img" src="images/Screenshot (14).png" alt="Original Tree">
+      <div class=codes>
+        <p>
+            Original Tree
+            <br><code>tree(spencer, 4, 50, 20)</code></br>
+        </p>
+      </div>
+
+      <h3> My Tree </h3>
+      <img class="img" src="images/Screenshot (15).png" alt="My Tree">
+      <div class=codes>
+        <div class=mods>
+        <p>
+          <code>tree(spencer, 4, 50, 20, 10)</code>
+          <h4><br>Modifications:</br></h4>
+          <ul>
+            <li>Shape: 5 circles are attached to the end of each segment/branch to form a flower</li>
+            <li>Color: I kept the color for the base of the tree the same, black, and randomized the color of the flowers so the flowers would be the object that recieves the most attention.</li>
+            <li>Width: A width parameter has been added and as the tree branches out more, the branches become thinner</li>
+            <li></li>
+          </ul>
+        </p>
+      </div>
+        <br><pre><code>
+              def flower(t):
+    t.begin_fill()
+    t.circle(6)
+    t.end_fill()
+    t.lt(72)
+    t.begin_fill()
+    t.circle(6)
+    t.end_fill()
+    t.lt(72)
+    t.begin_fill()
+    t.circle(6)
+    t.end_fill()
+    t.lt(72)
+    t.begin_fill()
+    t.circle(6)
+    t.end_fill()
+    t.lt(72)
+    t.begin_fill()
+    t.circle(6)
+    t.end_fill()
+    t.lt(72)
+
+def tree(t, depth, size, angle, width):
+    r = randint(100, 255)
+    g = randint(100, 255)
+    b = randint(100, 255)
+    t.fillcolor(r, g, b)
+    t.width(width)
+    if depth == 0:
+        t.fd(size)
+        flower(t)
+        t.bk(size)
+    else:
+        t.fd(size)
+        t.rt(angle)
+        tree(t, depth-1, size, angle, width-2)
+        t.lt(2 * angle)
+        tree(t, depth-1, size, angle, width-2)
+        t.rt(angle)
+        flower(t)
+        t.bk(size)
+
+spencer = turtle.Turtle()
+spencer.lt(90)
+spencer.speed(10)
+spencer.pd()
+tree(spencer, 4, 50, 20, 10)
+        </code></pre>
+    </p>
+      </div>
+    </div>
+
+    </body>
+
+</html>
+

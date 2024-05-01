@@ -1,0 +1,57 @@
+html {
+  background-color: #A6998A;
+  font-size: 24px;
+  display: flex;
+}
+
+body {
+  padding: 10%;
+  margin: auto;
+}
+h1 {
+ margin: auto;
+ text-align: center;
+ width: 90%;
+ font-size: 30px;
+ font-weight: bold;
+ background-color: #778899;
+ color: #FFFFF0;
+}
+
+h2, h3, h4, {
+  color: #FFFFF0;
+}
+
+p {
+  color: #FFFFF0;
+  margin: 5%;
+  font-size: 12px;
+}
+
+code {
+  color: #FFFFF0;
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.fractal{
+  margin: auto;
+}
+
+.img {
+  width: 600px;
+  height: auto;
+}
+
+.codes{
+  background-color: olivedrab;
+  border: 5px  #FFFFF0;
+  border-radius: 5px;
+}
+.mods {
+  color: #FFFFF0;
+  font-size: 80%;
+  background-color: olivedrab;
+  width: 800px;
+}
+
